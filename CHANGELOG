@@ -1,0 +1,21 @@
+# This is a changelog to PmWiki2PDF 
+*** 2011-06-21 ***
+HTML2PDF: v4.03
+PHP: add HTML2PDF setProtection method 
+PHP: rectify info time : define setLocale();
+
+*** 2011-05-12 ***
+HTML2PDF v4.02
+
+*** 2011-03-04 ***
+PHP: rewriting code
+Files Lang to errors mssg. 
+
+*** 2011-03-02 ***
+PHP: add a preg_replace to manage element caption (HTML2PDF not support!)
+
+*** 2011-02-09 ***
+V2 with HTML2PDF Class.
+
+A new version is born!
+

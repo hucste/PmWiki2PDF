@@ -1,0 +1,43 @@
+#
+# Cookbook PmWiki2Pdf v2
+#
+###
+
+This cookbook use a HTML2PDF Class ( GNU/LGPL ), by ?action=pdf
+It's an hack by Stephane HUC <devs@stephane-huc.net>
+
+HTML2PDF URL : http://html2pdf.fr/en/
+
+#
+# Install
+#
+
+=> Unzip the pmwiki2pdf.zip (or untar the pmwiki2pdf.tar.gz) on Cookbook directory.
+
+=> Verify the archive with the md5sum or sha1sum ...
+
+#
+# Config
+#
+
+=> Modify your file config.php in your local directory by this code:
+/*** Gestion PDF ***/
+include_once('cookbook/pmwiki2pdf-v2/pmwiki2pdf.php');
+
+=> Modify [your template].tmpl to include this code:
+<a href="$PageUrl?action=pdf" title="Read this web page on format .pdf" ><acronym title="Portable Document Format" lang="en">PDF</acronym></a>
+
+or
+
+=> Modify your GroupHeader, or GroupFooter, or your page by editing, and add this code:
+
+==> %right% '-[[{$FullName}?action=pdf | PDF]]-'
+
+==> or upload an icone pdf (plz, view in package): %right% '-[[{$FullName}?action=pdf | Attach:acrobat.png]]-'
+
+
+That's all folks ... really works 'n run !
+
+# icones PDF
+in Ubuntu Linux > oxygen
+

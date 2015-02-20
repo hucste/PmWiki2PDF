@@ -11,7 +11,7 @@ $cfg['output']['dest'] = 'I';
 /*
 TAGs not supported, separated by comma
 */
-$cfg['skip']="object"
+$cfg['skip']="object";
 
 /*
  * PDF Displaying

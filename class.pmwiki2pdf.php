@@ -229,8 +229,19 @@ class pmwiki2pdf {
 		catch(Exception $e) { die($this->get_mssg('Error_method').' '.__METHOD__.' '.$e); }
 	}
 	
+	private function skiptext() {
+		$cfg = $this->cfg;
+		$skips = $cfg['skip'];
+		$skips = explode(",",$skips);
+		foreach ($skips as $value) {
+			$pattern = "/<". $value . "[\s\S]*<\/". $value .">/";
+			$this->html = preg_replace($pattern, "", $this->html);
+			}
+		}
+	
 	private function change_code_html() {
 		try {
+			$this->skiptext();
 			$array = explode("\n", $this->html); 
 			
 			$array = $this->preg_replace_html_code($array); 
@@ -890,7 +901,7 @@ class pmwiki2pdf {
 		
 			$str = preg_replace('#&([A-za-z])(?:acute|cedil|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $str);
 			$str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str); // pour les ligatures e.g. '&oelig;'
-			$str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractères
+			$str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractÃ¨res
     
 			if(!empty($str)) return $str;
 		}
@@ -907,8 +918,8 @@ class pmwiki2pdf {
 				);
 			
 				$replace = array (
-					'™',
-					'→',
+					'â„¢',
+					'â†’',
 				);
 			
 				foreach($search as $key => $value) { 

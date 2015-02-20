@@ -7,6 +7,12 @@
  * */
 $cfg['output']['dest'] = 'I';
 
+
+/*
+TAGs not supported, separated by comma
+*/
+$cfg['skip']="object"
+
 /*
  * PDF Displaying
  * <http://wiki.spipu.net/doku.php?id=html2pdf:en:v4:display>
@@ -31,7 +37,7 @@ $cfg['display']['zoom'] = 'fullpage';
 // Sens: landscape or portrait orientation - L or P
 $cfg['page']['orientation'] = 'P';
 
-// Format: A4, A5, LETTER, width x height (100×200, ...), ...
+// Format: A4, A5, LETTER, width x height (100Ã—200, ...), ...
 $cfg['page']['format'] = 'A4';
 
 // Marge

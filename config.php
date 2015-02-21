@@ -3,14 +3,14 @@
  * PDF Output destination
  * 	I (to set a pdf name; or false), D,
  * 	F (to write on server), S (to obtain content pdf; or true)
- * 
+ *
  * */
 $cfg['output']['dest'] = 'I';
 
 /*
  * PDF Displaying
  * <http://wiki.spipu.net/doku.php?id=html2pdf:en:v4:display>
- * 
+ *
  * */
 
 //Layout: SinglePage, OneColumn, TwoColumnLeft, TwoColumnRight, TwoPageLeft or TwoPageRight
@@ -19,13 +19,13 @@ $cfg['display']['layout'] = 'SinglePage';
 // Mode: UseNone, UseOutlines, UseThumbs, FullScreen, UseOC or UseAttachments
 $cfg['display']['mode'] = 'UseNone';
 
-// Zoom: fullpage, fullwidth, real or default 
+// Zoom: fullpage, fullwidth, real or default
 $cfg['display']['zoom'] = 'fullpage';
 
 /*
  * PDF Definitions
  * <http://wiki.spipu.net/doku.php?id=html2pdf:en:v4:Accueil>
- * 
+ *
  * */
 
 // Sens: landscape or portrait orientation - L or P
@@ -46,12 +46,12 @@ $cfg['marge']['back']['bottom'] = 14;
 $cfg['marge']['back']['left'] = 10;
 
 /*
- * Managing 
- * 
+ * Managing
+ *
  * */
- 
+
 //$cfg['$page']['backcolor'] = ''; // hexadecimal code HTML!
-$cfg['page']['header']['include'] = 1; 
+$cfg['page']['header']['include'] = 1;
 $cfg['page']['footer']['include'] = 1;
 $cfg['page']['style']['include'] = 1;
 $cfg['page']['header']['name'] = 'page_header.html';
@@ -76,7 +76,7 @@ $cfg['encoding'] = 'UTF-8';
 $cfg['unicode'] = false;
 */
 
-// PDF Protection ( 0 : no ; 1 : yes ) 
+// PDF Protection ( 0 : no ; 1 : yes )
 $cfg['protect']['set'] = 1;	// to active protection
 $cfg['protect']['annot'] = 0;
 $cfg['protect']['copy'] = 1;
@@ -86,9 +86,9 @@ $cfg['protect']['owner_psswd'] = '';	// string to define owner's password
 
 /*
  * Manage to display rights
- * 
+ *
  * */
-// To display rights in pdf ( 0 : no ; 1 : yes ) 
+// To display rights in pdf ( 0 : no ; 1 : yes )
 $cfg['rights']['display'] = 1;
 // Choose your licence:
 /*
@@ -108,5 +108,8 @@ $cfg['rights']['charset'] = 'ISO-8859-15';
  * transform code HTML - because HTML2PDF not support DL
  * */
 // change dl by p, or li: 'dl2p', 'dl2li' <= this second choice is bugged!
-$cfg['transformer']['dl'] = 'dl2p'; 
+$cfg['transformer']['dl'] = 'dl2p';
+
+// Tags HTML Unsupported, separated by comma
+$cfg['skip'] = ''
 ?>
